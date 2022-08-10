@@ -1,13 +1,21 @@
 const menu = document.querySelector('.menu')
 const close = document.querySelector('.close')
 const nav = document.querySelector('nav')
+const dimer = document.querySelector('.dimer')
 
 menu.addEventListener('click', () => {
     nav.classList.add('open-nav')
+    dimer.classList.add('dimed')
 })
 
 close.addEventListener('click', () => {
     nav.classList.remove('open-nav')
+    dimer.classList.remove('dimed')
+})
+
+dimer.addEventListener('click', () => {
+    nav.classList.remove('open-nav')
+    dimer.classList.remove('dimed')
 })
 
 const buttons = document.querySelectorAll('[data-carousel-button]')
