@@ -59,6 +59,9 @@ img {
   padding: 1em;
   transform: translateY(-50%);
 }
+.logo svg {
+  width: 6em;
+}
 
 nav ul {
   display: flex;
@@ -159,7 +162,7 @@ nav ul a {
 }
 
 .heading {
-  font-size: 40px;
+  font-size: min(3vw, 40px);
   font-weight: 700;
   margin-bottom: 0.7em;
 }
@@ -212,9 +215,6 @@ nav ul a {
 }
 
 @media (max-width: 1230px) {
-  .heading {
-    font-size: 35px;
-  }
   .main-text {
     font-size: 13px;
   }
@@ -226,9 +226,6 @@ nav ul a {
   }
 }
 @media (max-width: 1080px) {
-  .heading {
-    font-size: 30px;
-  }
   .main-text {
     font-size: 12px;
   }
@@ -246,9 +243,6 @@ nav ul a {
   }
 }
 @media (max-width: 922px) {
-  .heading {
-    font-size: 24px;
-  }
   .slider-text {
     margin: 11% 12% 0 12%;
   }
@@ -316,7 +310,7 @@ nav ul a {
     left: 4%;
   }
   nav {
-    z-index: 3;
+    z-index: 4;
     position: fixed;
     top: 0;
     max-width: 400px;
@@ -339,7 +333,6 @@ nav ul a {
   nav .close {
     display: block;
     position: absolute;
-    z-index: 3;
     top: 50%;
     padding: 1em;
     transform: translateY(-60%);
@@ -348,6 +341,20 @@ nav ul a {
   }
   .open-nav {
     transform: translateY(0%);
+  }
+  .dimer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    z-index: 3;
+    transform: translateX(-100%);
+    transition: opacity 0.25s ease-in-out;
+  }
+  .dimed {
+    transform: translateX(0%);
+    opacity: 0.5;
   }
   .slider-text {
     margin: 15% 8% 15% 8%;
