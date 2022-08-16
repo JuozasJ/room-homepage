@@ -110,12 +110,12 @@ nav ul li a:hover::after {
   inset: 0;
 }
 .slide .slide-image {
-  transition: 200ms opacity ease-in-out 200ms;
   opacity: 0;
+  transition: 200ms opacity ease-in-out 200ms;
 }
 .slide .slide-text {
-  transition: 100ms opacity ease-in-out 0ms;
   opacity: 0;
+  transition: 200ms opacity ease-in-out 0ms;
 }
 
 .slide[data-active] {
@@ -126,8 +126,8 @@ nav ul li a:hover::after {
   opacity: 1;
 }
 .slide[data-active] .slide-text {
-  transition: 100ms opacity ease-in-out 100ms;
   opacity: 1;
+  transition: 300ms opacity ease-in-out 200ms;
 }
 
 .slide-image {
